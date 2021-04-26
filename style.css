@@ -1,0 +1,233 @@
+
+/* GLOBAL STYLE */
+*{
+font-family: 'Poppins', sans-serif;
+padding: 0;
+margin: 0;    
+box-sizing: border-box; 
+text-decoration: none;
+list-style-type: none;
+}
+body{
+font-family: 'Poppins', sans-serif;
+}
+:root{
+ --light: #fff ;
+}
+/* CUSTOM STYLE */
+.wrapper{
+ position:relative;
+ width: 100%;
+ min-height: 100vh;
+}
+.contact{
+ width: 100%;
+ position: relative;
+}
+.contact_info{
+ color: var(--light);
+ background: #12475f;
+ padding: 20px;
+ font-size: 20px;
+ width: 100%;
+ position: relative;
+}
+.contact_info h2{
+ font-size: 20px;
+ pointer-events: none;
+}
+hr{
+ margin: 30px 0;
+ height: 4px;
+ width: 60px;
+ background:var(--light);
+}
+.info{
+display: flex;
+width: 100%;
+position: relative;
+margin-bottom: 20px;
+}
+.info a{
+ color: var(--light);
+}
+.info a:hover{
+ text-decoration: underline;
+}
+.info label{
+ background-color: #1abc9c;
+ padding: 5px;
+ font-size: 15px;
+ position: relative;
+ border-radius: 50%;
+ height: 40px;
+ width: 40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-right: 20px;
+}
+.info label:hover{
+ color: rgb(0, 255, 255);
+ background: #000;
+ font-size: 25px;
+ transition: all 0.5s ease-in;
+}
+.social_icon{
+ position: relative;
+ width: 100%;
+ margin: 80px 0;
+}
+.social_icon h2{
+ padding-bottom: 25px;
+ pointer-events: none;
+}
+.social_icon a{
+position: relative;
+color: var(--light);
+height: 40px;
+width: 40px;
+border: 2px solid var(--light);
+padding: 5px;
+border-radius: 50%;
+font-size: 18px;
+margin-right: 20px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+.social_icon a:hover{
+ color: #00fff2;
+ background: #000000;
+ transition: all 0.5s;
+}
+/* CONTACT FORM */
+.contact_form{
+ width: 100%;
+ position: relative;
+ padding: 40px;
+}
+.contact_form h2{
+ color: #1abc9c;
+ font-size: 20px;
+ margin: 10px 0;
+}
+.contact_form hr{
+ position: relative;
+ width: 60px;
+ height: 4px;
+ background:#1abc9c;
+ border: none;
+ margin-top: 7px;
+}
+.contact_form form{
+ position: relative;
+}
+.contact_form form input{
+ display: block;
+ background:#12475f;
+ position: relative;
+ width: 280px;
+ padding: 10px;
+ margin-bottom: 20px;
+ color: var(--light);
+ font-size: 15px ;
+ border: none;
+ outline: none;
+}
+.contact_form form textarea{
+display: block;
+ background:#12475f;
+ position: relative;
+ width: 280px;
+ height: 100px;
+ resize: none;
+ padding: 10px;
+ margin-bottom: 20px;
+ color: var(--light);
+ font-size: 15px ;
+ border: none;
+ outline: none;
+}
+.contact_form form input[type="submit"]{
+ display: block;
+ padding: 10px 30px;
+ font-size: 14px;
+ width: 130px;
+ height: ;
+ font-weight:600;
+ background: #1abc9c;
+ color: #12475f;
+ cursor: pointer;
+ border: none;
+}
+.contact_form form input[type="submit"]:hover{
+ background: black;
+ color: aqua;
+}
+/* MOB SCREEN */
+@media screen and (max-width:500px){
+.social_icon{
+     margin: 15px 0;
+ }
+ .contact_info .social_icon h2{
+     margin-top: 30px;
+ }
+}
+/* TAB SCREEN */
+@media screen and (min-width:768px){
+  .contact_form{
+      width: 80%;
+      margin: 0 auto;
+  }
+  .contact_form form input,
+  .contact_form form textarea{
+      width: 500px;
+  }
+}
+/* LAPTOP SCREEN */
+@media screen and (min-width:1000px){
+ .wrapper{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background:  #12475f;
+ }
+ .wrapper::before{
+     content: '';
+     background: #1abc9c;
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+ .contact{
+     position: relative;
+     background: #fff;
+     width: 70%;
+     height: 75vh;
+     padding: 10px;
+ }
+ .contact_info{
+     width: 300px;
+     position: absolute;
+     top: 35px;
+     left: -10%;
+ }
+ .social_icon{
+     margin: 15px 0;
+ }
+ .contact_form{
+    position: absolute;
+    right: -150px;
+ }
+ .contact_form form input,
+ .contact_form form textarea{
+     background: transparent;
+     border-bottom: 3px solid  #12475f;
+     color: #12475f;
+     font-size: 17px;
+     font-weight: 600;
+ }
+}
